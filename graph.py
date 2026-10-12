@@ -1,7 +1,9 @@
 graph = {  # adjacency list
     "Alice": ["Bob"],
     "Bob": ["Alice", "Charlie", "Diana"],
-    ...
+    "Charlie": ["Bob", "Elliot"],
+    "Diana": ["Bob", "Elliot"],
+    "Elliot": ["Charlie", "Diana"],
 }
 
 def is_complete(graph):
@@ -13,6 +15,8 @@ def is_complete(graph):
 
     Returns a Boolean.
     """
+    nodes = set(graph.keys())
+
 
 def make_complete_graph(node_names):
     """Produce a complete graph with the given node names.
