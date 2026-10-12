@@ -15,9 +15,6 @@ def can_reach(graph, start):
     Given the node `start`, go through the given graph and figure out
     all the nodes you can eventually get to.
     """
-    reachable = set(graph[start])
-    for neighbour in graph[start]:
-        reachable |= can_reach(graph, neighbour)
-    return reachable
+    
 
 print(can_reach(graph, "A"))
