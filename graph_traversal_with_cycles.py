@@ -1,3 +1,5 @@
+from collections import deque
+
 graph = {
     "A": ["C", "D", "E"],
     "B": ["D", "E"],
@@ -9,7 +11,7 @@ graph = {
     "H": ["A"],
 }
 
-def can_reach(graph, start):
+def can_reach1(graph, start):
     """Return all the nodes you can get to from the starting point.
     
     Given the node `start`, go through the given graph and figure out
@@ -27,4 +29,21 @@ def can_reach(graph, start):
 
     return visited
 
-print(can_reach(graph, "A"))
+
+def can_reach2(graph, start):
+    """Return all the nodes you can get to from the starting point.
+    
+    Given the node `start`, go through the given graph and figure out
+    all the nodes you can eventually get to.
+    """
+    to_visit = deque([start])  # <--
+    visited = set()
+    while to_visit:
+        current_node = to_visit.popleft()  # <--
+        visited.add(current_node)
+        for neighbour in graph[current_node]:
+            if neighbour in visited:
+                continue
+            to_visit.append(neighbour)
+
+    return visited
