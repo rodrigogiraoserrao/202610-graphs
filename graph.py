@@ -6,10 +6,8 @@ graph_list_of_lists = [
     ...
 ]
 
-names_to_ids = {
-    "Alice": 0,
-    "Bob": 1,
+graph = {
+    "Alice": ["Bob"],
+    "Bob": ["Alice", "Charlie", "Diana"],
     ...
 }
-
-graph_list_of_lists[1][3]
