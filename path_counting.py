@@ -10,6 +10,7 @@ graph = {
 }
 
 # This version doesn't handle cycles very well 🤪
+# Exercise: how do you fix it?
 def count_paths(graph, start, target):
     """Count the number of ways in which you can go from
     `start` to `target`."""
