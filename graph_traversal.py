@@ -16,3 +16,6 @@ def can_reach(graph, start):
     all the nodes you can eventually get to.
     """
     ...
+
+assert can_reach(graph, "F") == {"G", "H"}
+assert can_reach(graph, "A") == set("CDEFGH")
