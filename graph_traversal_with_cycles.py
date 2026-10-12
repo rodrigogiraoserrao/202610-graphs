@@ -17,10 +17,10 @@ def can_reach1(graph, start):
     Given the node `start`, go through the given graph and figure out
     all the nodes you can eventually get to.
     """
-    to_visit = [start]
+    to_visit = [start]  # <--
     visited = set()
     while to_visit:
-        current_node = to_visit.pop()
+        current_node = to_visit.pop()  # <--
         visited.add(current_node)
         for neighbour in graph[current_node]:
             if neighbour in visited:
