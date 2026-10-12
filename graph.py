@@ -15,4 +15,11 @@ def is_complete(graph):
     """
 
 def make_complete_graph(node_names):
-    ...
+    """Produce a complete graph with the given node names.
+
+    Take a list of node names (e.g., ["A", "B", "C"]) and
+    returns a dictionary of adjacency lists that represents
+    a complete graph with the nodes you specify.
+
+    (is_complete(make_complete_graph(...)) -> True)
+    """
