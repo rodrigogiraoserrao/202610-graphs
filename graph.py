@@ -36,11 +36,13 @@ def make_complete_graph(node_names):
     # [Alice, Bob, Charlie, Diana, Elliot]
     #  ^^^^^^^^^^ [:2]
     #                  [3:] ^^^^^^^^^^^^^
-    return {
-        node_name: node_names[:idx] + node_names[idx + 1:]
-        for idx, node_name in enumerate(node_names)
-    }
-    # for idx, node_name in enumerate(node_names):
-    #     neighbours = node_names[:idx] + node_names[idx + 1:]
-    #     graph[node_name] = neighbours
-    # return graph
+    for idx, node_name in enumerate(node_names):
+        neighbours = node_names[:idx] + node_names[idx + 1:]
+        graph[node_name] = neighbours
+    return graph
+
+# def make_complete_graph(node_names):
+#     return {
+#         node_name: node_names[:idx] + node_names[idx + 1:]
+#         for idx, node_name in enumerate(node_names)
+#     }
