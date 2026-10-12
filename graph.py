@@ -3,3 +3,14 @@ graph = {  # adjacency list
     "Bob": ["Alice", "Charlie", "Diana"],
     ...
 }
+
+def is_complete(graph):
+    """Check whether a graph is complete.
+
+    Takes a graph as a dictionary of adjacency lists
+    and checks whether all nodes are connected to
+    all other nodes.
+    """
+
+def make_complete_graph(node_names):
+    ...
