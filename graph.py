@@ -4,9 +4,9 @@ graph_list_of_lists = [
     [True , False, True , True , False], # B
     [False, True , False, False, True ], # C
     ...
-]
+]  # adjacency matrix
 
-graph = {
+graph = {  # adjacency list
     "Alice": ["Bob"],
     "Bob": ["Alice", "Charlie", "Diana"],
     ...
