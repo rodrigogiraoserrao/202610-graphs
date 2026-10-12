@@ -19,5 +19,11 @@ def can_reach(graph, start):
     visited = set()
     while to_visit:
         current_node = to_visit.pop()
+        for neighbour in graph[current_node]:
+            if neighbour in visited:
+                continue
+            to_visit.append(neighbour)
+
+    return visited
 
 print(can_reach(graph, "A"))
