@@ -32,3 +32,6 @@ def make_complete_graph(node_names):
 
     (is_complete(make_complete_graph(...)) -> True)
     """
+    [Alcie, Bob, Charlie, Diana, Elliot]
+    for idx, node_name in enumerate(node_names):
+        neighbours = node_names[:idx] + node_names[idx + 1:]
