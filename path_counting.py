@@ -15,9 +15,9 @@ def count_paths(graph, start, target):
     if start == target:
         return 1
 
-    return sum(
-        count_paths(graph, neighbour, target)
-        for neighbour in graph[start]
-    )
+    total = 0
+    for neighbour in graph[start]:
+        total += count_paths(graph, neighbour, target)
+    return total
 
 print(count_paths(graph, "A", "H"))
