@@ -12,3 +12,5 @@ graph = {
 def count_paths(graph, start, target):
     """Count the number of ways in which you can go from
     `start` to `target`."""
+
+print(count_paths(graph, "A", "H"))
