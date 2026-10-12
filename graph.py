@@ -10,6 +10,8 @@ def is_complete(graph):
     Takes a graph as a dictionary of adjacency lists
     and checks whether all nodes are connected to
     all other nodes.
+
+    Returns a Boolean.
     """
 
 def make_complete_graph(node_names):
