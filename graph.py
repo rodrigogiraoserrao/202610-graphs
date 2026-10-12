@@ -16,7 +16,10 @@ def is_complete(graph):
     Returns a Boolean.
     """
     nodes = set(graph.keys())
-
+    for node, neighbours in graph.items():
+        if set(neighbours) != nodes - node:
+            return False
+    return True
 
 def make_complete_graph(node_names):
     """Produce a complete graph with the given node names.
