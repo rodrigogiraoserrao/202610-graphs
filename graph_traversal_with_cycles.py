@@ -15,6 +15,9 @@ def can_reach(graph, start):
     Given the node `start`, go through the given graph and figure out
     all the nodes you can eventually get to.
     """
-    
+    to_visit = [start]
+    visited = set()
+    while to_visit:
+        current_node = to_visit.pop()
 
 print(can_reach(graph, "A"))
