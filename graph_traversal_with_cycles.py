@@ -47,3 +47,6 @@ def can_reach2(graph, start):
             to_visit.append(neighbour)
 
     return visited
+
+for node in graph.keys():
+    assert can_reach1(graph, node) == can_reach2(graph, node)
