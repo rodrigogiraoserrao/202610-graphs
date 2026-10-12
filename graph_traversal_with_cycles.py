@@ -19,6 +19,7 @@ def can_reach(graph, start):
     visited = set()
     while to_visit:
         current_node = to_visit.pop()
+        visited.add(current_node)
         for neighbour in graph[current_node]:
             if neighbour in visited:
                 continue
